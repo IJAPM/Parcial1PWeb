@@ -15,6 +15,7 @@
             <h1 class="mt-5 mb-4">RESULTADO</h1>
             <p>Nombre: <span id="nombre"></span></p>
             <p>Email: <span id="email"></span></p>
+            <p>Telefono: <span id="telefono"></span></p>
             <p>Gustos:</p>
             <ul id="listaGustos" class="list-group"></ul>
             
@@ -26,12 +27,14 @@
     const urlParams = new URLSearchParams(window.location.search);
     const nombre = urlParams.get('nombre');
     const email = urlParams.get('email');
+    const telefono = urlParams.get('telefono');
     const gustos = urlParams.get('gusto').split(',');
     const porcentajes = urlParams.get('porc').split(',');
 
     // Muestra la información en la página
     document.getElementById('nombre').textContent = nombre;
     document.getElementById('email').textContent = email;
+    document.getElementById('telefono').textContent = telefono;
     const listaGustos = document.getElementById('listaGustos');
     for (let i = 0; i < gustos.length; i++) {
         const gustoItem = document.createElement('li');
