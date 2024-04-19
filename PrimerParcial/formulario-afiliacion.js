@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const porcentaje = filaEnEdicion.querySelector("td:nth-child(2)").textContent;
         const originalGusto = filaEnEdicion.querySelector("td:first-child").textContent;
         const nuevoPorcentaje = encodeURIComponent(porcentaje.trim());
-        const url = `Resultado.html?nombre=${encodeURIComponent(formulario.nombre.value)}&email=${encodeURIComponent(formulario.email.value)}&gusto=${encodeURIComponent(originalGusto)}&porc=${nuevoPorcentaje}`;
+        const url = `Resultado.html?nombre=${encodeURIComponent(formulario.nombre.value)}&email=${encodeURIComponent(formulario.email.value)}&telefono=${encodeURIComponent(formulario.telefono.value)}&gusto=${encodeURIComponent(originalGusto)}&porc=${nuevoPorcentaje}`;
         console.log("URL de redirección:", url); // Agregamos un mensaje de registro para verificar la URL
         window.location.href = url;
     });
