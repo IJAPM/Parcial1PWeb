@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Afiliación</title>
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="titulo">Formulario de Afiliación</h1>
+        <form id="formulario-afiliacion">
+            <div class="input-group">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="telefono" name="telefono" placeholder="Teléfono" required>
+            </div>
+            <div class="input-group">
+                <input type="text2" id="gusto" name="gusto" placeholder="Gusto" required>
+                <button type="button" id="btn-enviar-gusto">Agregar Gusto</button>
+            </div>
+        </form>
+        <div class="table-container">
+            <table id="tabla-gustos">
+                <thead>
+                    <tr>
+                        <th>Gusto</th>
+                        <th>%</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se agregarán las filas dinámicamente -->
+                </tbody>
+            </table>
+            <div class="mensaje-container">
+                <p id="mensaje-guardar">Pulse Aceptar para guardar los cambios o Cancelar para anularlos</p>
+                <button class="btn-aceptar">Aceptar</button>
+                <button class="btn-cancelar">Cancelar</button>
+                <p class="mensaje-error" style="display: none;"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="formulario-afiliacion.js"></script>
+
+</body>
+
+</html>

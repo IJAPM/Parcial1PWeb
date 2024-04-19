@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina resultado</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Estilo.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="mt-5 mb-4">RESULTADO</h1>
+            <p>Nombre: <span id="nombre"></span></p>
+            <p>Email: <span id="email"></span></p>
+            <p>Gustos:</p>
+            <ul id="listaGustos" class="list-group"></ul>
+            
+        </div>
+    </div>
+</body>
+<script>
+    // Extrae los parámetros de la URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const nombre = urlParams.get('nombre');
+    const email = urlParams.get('email');
+    const gustos = urlParams.get('gusto').split(',');
+    const porcentajes = urlParams.get('porc').split(',');
+
+    // Muestra la información en la página
+    document.getElementById('nombre').textContent = nombre;
+    document.getElementById('email').textContent = email;
+    const listaGustos = document.getElementById('listaGustos');
+    for (let i = 0; i < gustos.length; i++) {
+        const gustoItem = document.createElement('li');
+        gustoItem.textContent = gustos[i] + ' - ' + porcentajes[i];
+        gustoItem.classList.add('list-group-item');
+        listaGustos.appendChild(gustoItem);
+    }
+</script>
+
+</html>

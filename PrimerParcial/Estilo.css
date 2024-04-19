@@ -1,0 +1,109 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-group button {
+    width: 100px;
+    padding: 9px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="text2"] {
+    width: 81%;
+    box-sizing: border-box;
+    /* Esto asegura que el ancho del input incluya el padding y el borde */
+}
+
+.input-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Tabla */
+.table-container {
+    margin-top: 20px;
+}
+
+#tabla-gustos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-gustos th,
+#tabla-gustos td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#tabla-gustos th {
+    background-color: #f2f2f2;
+}
+
+#tabla-gustos tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Mensaje de error */
+.mensaje-error {
+    color: red;
+    font-weight: bold;
+}
+
+/* Botones aceptar y cancelar */
+.btn-aceptar,
+.btn-cancelar {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-aceptar {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-cancelar {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-aceptar:hover,
+.btn-cancelar:hover {
+    filter: brightness(90%);
+}
